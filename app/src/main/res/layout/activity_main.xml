@@ -11,9 +11,16 @@
         android:id="@+id/Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:layout_marginEnd="129dp"
+        android:layout_marginStart="129dp"
+        android:layout_marginTop="22dp"
         android:text="@string/textview"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="22dp"
+        app:layout_constraintBottom_toTopOf="@+id/Body"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:text="Mr. Potato Head" />
 
     <LinearLayout
@@ -21,8 +28,11 @@
         android:layout_width="292dp"
         android:layout_height="231dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="54dp">
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Name">
 
         <ImageView
             android:id="@+id/imageView2"
@@ -40,16 +50,21 @@
         android:id="@+id/Arms"
         android:layout_width="292dp"
         android:layout_height="231dp"
+        android:layout_marginBottom="44dp"
+        android:layout_marginTop="13dp"
         android:layout_weight="1"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="54dp">
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Name">
 
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_weight="1"
             app:srcCompat="@drawable/arms" />
     </LinearLayout>
 
@@ -57,14 +72,20 @@
         android:id="@+id/Ears"
         android:layout_width="292dp"
         android:layout_height="231dp"
+        android:layout_marginBottom="44dp"
+        android:layout_marginTop="13dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="54dp">
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Name">
 
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             app:srcCompat="@drawable/ears" />
     </LinearLayout>
 
@@ -72,15 +93,20 @@
         android:id="@+id/Eyebrows"
         android:layout_width="292dp"
         android:layout_height="231dp"
+        android:layout_marginBottom="44dp"
+        android:layout_marginTop="13dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="54dp">
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Name">
 
         <ImageView
             android:id="@+id/imageView6"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             app:srcCompat="@drawable/eyebrows" />
     </LinearLayout>
 
@@ -88,14 +114,20 @@
         android:id="@+id/Eyes"
         android:layout_width="292dp"
         android:layout_height="231dp"
+        android:layout_marginBottom="44dp"
+        android:layout_marginTop="13dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="54dp">
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Name">
 
         <ImageView
             android:id="@+id/imageView7"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             app:srcCompat="@drawable/eyes" />
     </LinearLayout>
 
@@ -103,14 +135,20 @@
         android:id="@+id/Glasses"
         android:layout_width="292dp"
         android:layout_height="231dp"
+        android:layout_marginBottom="44dp"
+        android:layout_marginTop="13dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="54dp">
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Name">
 
         <ImageView
             android:id="@+id/imageView8"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             app:srcCompat="@drawable/glasses" />
     </LinearLayout>
 
@@ -118,14 +156,20 @@
         android:id="@+id/Hat"
         android:layout_width="292dp"
         android:layout_height="231dp"
+        android:layout_marginBottom="44dp"
+        android:layout_marginTop="13dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="54dp">
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Name">
 
         <ImageView
             android:id="@+id/imageView9"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             app:srcCompat="@drawable/hat" />
     </LinearLayout>
 
@@ -133,14 +177,18 @@
         android:id="@+id/Mouth"
         android:layout_width="292dp"
         android:layout_height="231dp"
+        android:layout_marginTop="13dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="54dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Name">
 
         <ImageView
             android:id="@+id/imageView10"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             app:srcCompat="@drawable/mouth" />
     </LinearLayout>
 
@@ -148,14 +196,20 @@
         android:id="@+id/Mustache"
         android:layout_width="292dp"
         android:layout_height="231dp"
+        android:layout_marginBottom="44dp"
+        android:layout_marginTop="13dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="54dp">
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Name">
 
         <ImageView
             android:id="@+id/imageView11"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             app:srcCompat="@drawable/mustache" />
     </LinearLayout>
 
@@ -163,14 +217,20 @@
         android:id="@+id/Nose"
         android:layout_width="292dp"
         android:layout_height="231dp"
+        android:layout_marginBottom="44dp"
+        android:layout_marginTop="13dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="54dp">
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Name">
 
         <ImageView
             android:id="@+id/imageView12"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             app:srcCompat="@drawable/nose" />
     </LinearLayout>
 
@@ -178,24 +238,34 @@
         android:id="@+id/Shoes"
         android:layout_width="292dp"
         android:layout_height="231dp"
+        android:layout_marginBottom="44dp"
+        android:layout_marginTop="13dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="54dp">
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Name">
 
         <ImageView
             android:id="@+id/imageView13"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             app:srcCompat="@drawable/shoes" />
     </LinearLayout>
 
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="297dp"
+        android:layout_width="289dp"
         android:layout_height="160dp"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="329dp">
+        android:layout_marginBottom="22dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Body">
 
         <TableRow
             android:layout_width="match_parent"
@@ -205,7 +275,7 @@
                 android:id="@+id/checkBox"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="@string/checkbox_arms"
                 tools:layout_editor_absoluteX="47dp"
                 tools:layout_editor_absoluteY="310dp"
                 tools:text="Arms" />
@@ -214,7 +284,7 @@
                 android:id="@+id/checkBox2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="@string/checkbox_ears"
                 tools:layout_editor_absoluteX="47dp"
                 tools:layout_editor_absoluteY="362dp"
                 tools:text="Ears" />
@@ -228,7 +298,7 @@
                 android:id="@+id/checkBox3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="@string/checkbox_eyebrows"
                 tools:layout_editor_absoluteX="47dp"
                 tools:layout_editor_absoluteY="413dp"
                 tools:text="Eyebrows" />
@@ -237,7 +307,7 @@
                 android:id="@+id/checkBox4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="@string/checkbox_eyes"
                 tools:layout_editor_absoluteX="47dp"
                 tools:layout_editor_absoluteY="463dp"
                 tools:text="Eyes" />
@@ -251,7 +321,7 @@
                 android:id="@+id/checkBox5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="@string/checkbox_glasses"
                 tools:layout_editor_absoluteX="235dp"
                 tools:layout_editor_absoluteY="310dp"
                 tools:text="Glasses" />
@@ -260,7 +330,7 @@
                 android:id="@+id/checkBox6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="@string/checkbox_hat"
                 tools:layout_editor_absoluteX="235dp"
                 tools:layout_editor_absoluteY="362dp"
                 tools:text="Hat" />
@@ -274,7 +344,7 @@
                 android:id="@+id/checkBox7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="@string/checkbox_mouth"
                 tools:layout_editor_absoluteX="235dp"
                 tools:layout_editor_absoluteY="413dp"
                 tools:text="Mouth" />
@@ -283,7 +353,7 @@
                 android:id="@+id/checkBox8"
                 android:layout_width="326dp"
                 android:layout_height="match_parent"
-                android:text="CheckBox"
+                android:text="@string/checkbox_mustache"
                 tools:layout_editor_absoluteX="235dp"
                 tools:layout_editor_absoluteY="463dp"
                 tools:text="Mustache" />
@@ -299,14 +369,14 @@
                 android:id="@+id/checkBox9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="@string/checkbox_nose"
                 tools:text="Nose" />
 
             <CheckBox
                 android:id="@+id/checkBox10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="@string/checkbox_shoes"
                 tools:text="Shoes" />
         </TableRow>
 
