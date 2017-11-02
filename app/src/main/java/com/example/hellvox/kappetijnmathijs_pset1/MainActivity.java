@@ -6,35 +6,43 @@ import android.widget.CheckBox;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+
 
 
 public class MainActivity extends AppCompatActivity {
 
+    CheckBox checkBox_arms,checkBox_ears,checkBox_eyebrows,checkBox_eyes,checkBox_glasses,checkBox_hat,
+            checkBox_mouth,checkBox_mustache,checkBox_nose,checkBox_shoes = null;
+    LinearLayout Arms,Ears,Eyebrows,Eyes,Glasses,Hat,Mouth,Mustache,Nose,Shoes = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
+        if (savedInstanceState != null) {
+
+        }
         setContentView(R.layout.activity_main);
-        final CheckBox checkBox_arms = (CheckBox) findViewById(R.id.checkBox_arms);
-        final CheckBox checkBox_ears = (CheckBox) findViewById(R.id.checkBox_ears);
-        final CheckBox checkBox_eyebrows = (CheckBox) findViewById(R.id.checkBox_eyebrows);
-        final CheckBox checkBox_eyes = (CheckBox) findViewById(R.id.checkBox_eyes);
-        final CheckBox checkBox_glasses = (CheckBox) findViewById(R.id.checkBox_glasses);
-        final CheckBox checkBox_hat = (CheckBox) findViewById(R.id.checkBox_hat);
-        final CheckBox checkBox_mouth = (CheckBox) findViewById(R.id.checkBox_mouth);
-        final CheckBox checkBox_mustache = (CheckBox) findViewById(R.id.checkBox_mustache);
-        final CheckBox checkBox_nose = (CheckBox) findViewById(R.id.checkBox_nose);
-        final CheckBox checkBox_shoes = (CheckBox) findViewById(R.id.checkBox_shoes);
-        final LinearLayout Arms=(LinearLayout)this.findViewById(R.id.Arms);
-        final LinearLayout Ears=(LinearLayout)this.findViewById(R.id.Ears);
-        final LinearLayout Eyebrows=(LinearLayout)this.findViewById(R.id.Eyebrows);
-        final LinearLayout Eyes=(LinearLayout)this.findViewById(R.id.Eyes);
-        final LinearLayout Glasses=(LinearLayout)this.findViewById(R.id.Glasses);
-        final LinearLayout Hat=(LinearLayout)this.findViewById(R.id.Hat);
-        final LinearLayout Mouth=(LinearLayout)this.findViewById(R.id.Mouth);
-        final LinearLayout Mustache=(LinearLayout)this.findViewById(R.id.Mustache);
-        final LinearLayout Nose=(LinearLayout)this.findViewById(R.id.Nose);
-        final LinearLayout Shoes=(LinearLayout)this.findViewById(R.id.Shoes);
+        checkBox_arms = (CheckBox) findViewById(R.id.checkBox_arms);
+        checkBox_ears = (CheckBox) findViewById(R.id.checkBox_ears);
+        checkBox_eyebrows = (CheckBox) findViewById(R.id.checkBox_eyebrows);
+        checkBox_eyes = (CheckBox) findViewById(R.id.checkBox_eyes);
+        checkBox_glasses = (CheckBox) findViewById(R.id.checkBox_glasses);
+        checkBox_hat = (CheckBox) findViewById(R.id.checkBox_hat);
+        checkBox_mouth = (CheckBox) findViewById(R.id.checkBox_mouth);
+        checkBox_mustache = (CheckBox) findViewById(R.id.checkBox_mustache);
+        checkBox_nose = (CheckBox) findViewById(R.id.checkBox_nose);
+        checkBox_shoes = (CheckBox) findViewById(R.id.checkBox_shoes);
+        Arms=(LinearLayout)this.findViewById(R.id.Arms);
+        Ears=(LinearLayout)this.findViewById(R.id.Ears);
+        Eyebrows=(LinearLayout)this.findViewById(R.id.Eyebrows);
+        Eyes=(LinearLayout)this.findViewById(R.id.Eyes);
+        Glasses=(LinearLayout)this.findViewById(R.id.Glasses);
+        Hat=(LinearLayout)this.findViewById(R.id.Hat);
+        Mouth=(LinearLayout)this.findViewById(R.id.Mouth);
+        Mustache=(LinearLayout)this.findViewById(R.id.Mustache);
+        Nose=(LinearLayout)this.findViewById(R.id.Nose);
+        Shoes=(LinearLayout)this.findViewById(R.id.Shoes);
         checkBox_arms.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -136,4 +144,33 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        Arms.setVisibility(savedInstanceState.getInt("Arms Visibility", View.GONE));
+        Eyes.setVisibility(savedInstanceState.getInt("Eyes Visibility", View.GONE));
+        Eyebrows.setVisibility(savedInstanceState.getInt("Eyebrows Visibility", View.GONE));
+        Ears.setVisibility(savedInstanceState.getInt("Ears Visibility", View.GONE));
+        Glasses.setVisibility(savedInstanceState.getInt("Glasses Visibility", View.GONE));
+        Hat.setVisibility(savedInstanceState.getInt("Hat Visibility", View.GONE));
+        Mouth.setVisibility(savedInstanceState.getInt("Mouth Visibility", View.GONE));
+        Mustache.setVisibility(savedInstanceState.getInt("Mustache Visibility", View.GONE));
+        Nose.setVisibility(savedInstanceState.getInt("Nose Visibility", View.GONE));
+        Shoes.setVisibility(savedInstanceState.getInt("Shoes Visibility", View.GONE));
+        super.onRestoreInstanceState(savedInstanceState);
+    }
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        savedInstanceState.putInt("Arms Visibility", Arms.getVisibility());
+        savedInstanceState.putInt("Eyes Visibility", Eyes.getVisibility());
+        savedInstanceState.putInt("Eyebrows Visibility", Eyebrows.getVisibility());
+        savedInstanceState.putInt("Ears Visibility", Ears.getVisibility());
+        savedInstanceState.putInt("Glasses Visibility", Glasses.getVisibility());
+        savedInstanceState.putInt("Hat Visibility", Hat.getVisibility());
+        savedInstanceState.putInt("Mouth Visibility", Mouth.getVisibility());
+        savedInstanceState.putInt("Mustache Visibility", Mustache.getVisibility());
+        savedInstanceState.putInt("Nose Visibility", Nose.getVisibility());
+        savedInstanceState.putInt("Shoes Visibility", Shoes.getVisibility());
+        super.onSaveInstanceState(savedInstanceState);
+    }
 }
+

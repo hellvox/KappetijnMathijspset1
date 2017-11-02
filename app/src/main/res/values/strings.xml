@@ -2,6 +2,16 @@
     <string name="app_name">KappetijnMathijs-pset1</string>
     <string name="textview">Mr. Potato Head</string>
     <string name="body">Body</string>
+    <string name="ears">Ears</string>
+    <string name="arms">Arms</string>
+    <string name="shoes">Shoes</string>
+    <string name="mustache">Mustache</string>
+    <string name="hat">Hat</string>
+    <string name="nose">Nose</string>
+    <string name="mouth">Mouth</string>
+    <string name="eyebrows">Eyebrows</string>
+    <string name="glasses">Glasses</string>
+    <string name="eyes">Eyes</string>
     <string name="checkbox_eyebrows">Eyebrows</string>
     <string name="checkbox_eyes">Eyes</string>
     <string name="checkbox_glasses">Glasses</string>
