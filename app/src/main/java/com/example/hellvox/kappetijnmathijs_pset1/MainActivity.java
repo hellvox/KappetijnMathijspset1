@@ -6,22 +6,17 @@ import android.widget.CheckBox;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.LinearLayout;
-import android.widget.TextView;
-
 
 
 public class MainActivity extends AppCompatActivity {
 
     CheckBox checkBox_arms,checkBox_ears,checkBox_eyebrows,checkBox_eyes,checkBox_glasses,checkBox_hat,
-            checkBox_mouth,checkBox_mustache,checkBox_nose,checkBox_shoes = null;
-    LinearLayout Arms,Ears,Eyebrows,Eyes,Glasses,Hat,Mouth,Mustache,Nose,Shoes = null;
+            checkBox_mouth,checkBox_mustache,checkBox_nose,checkBox_shoes;
+    LinearLayout Arms,Ears,Eyebrows,Eyes,Glasses,Hat,Mouth,Mustache,Nose,Shoes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (savedInstanceState != null) {
-
-        }
         setContentView(R.layout.activity_main);
         checkBox_arms = (CheckBox) findViewById(R.id.checkBox_arms);
         checkBox_ears = (CheckBox) findViewById(R.id.checkBox_ears);
