@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Initiate all variables
     CheckBox checkBox_arms,checkBox_ears,checkBox_eyebrows,checkBox_eyes,checkBox_glasses,checkBox_hat,
             checkBox_mouth,checkBox_mustache,checkBox_nose,checkBox_shoes;
     LinearLayout Arms,Ears,Eyebrows,Eyes,Glasses,Hat,Mouth,Mustache,Nose,Shoes;
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Give the variables the correct value.
         checkBox_arms = (CheckBox) findViewById(R.id.checkBox_arms);
         checkBox_ears = (CheckBox) findViewById(R.id.checkBox_ears);
         checkBox_eyebrows = (CheckBox) findViewById(R.id.checkBox_eyebrows);
@@ -38,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         Mustache=(LinearLayout)this.findViewById(R.id.Mustache);
         Nose=(LinearLayout)this.findViewById(R.id.Nose);
         Shoes=(LinearLayout)this.findViewById(R.id.Shoes);
+
+        //Set the checkbox listener to make the checkboxes work( visible vs invisible)
         checkBox_arms.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -139,20 +144,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    //Function to restore the state of the checkboxes.
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        Arms.setVisibility(savedInstanceState.getInt("Arms Visibility", View.GONE));
-        Eyes.setVisibility(savedInstanceState.getInt("Eyes Visibility", View.GONE));
-        Eyebrows.setVisibility(savedInstanceState.getInt("Eyebrows Visibility", View.GONE));
-        Ears.setVisibility(savedInstanceState.getInt("Ears Visibility", View.GONE));
-        Glasses.setVisibility(savedInstanceState.getInt("Glasses Visibility", View.GONE));
-        Hat.setVisibility(savedInstanceState.getInt("Hat Visibility", View.GONE));
-        Mouth.setVisibility(savedInstanceState.getInt("Mouth Visibility", View.GONE));
-        Mustache.setVisibility(savedInstanceState.getInt("Mustache Visibility", View.GONE));
-        Nose.setVisibility(savedInstanceState.getInt("Nose Visibility", View.GONE));
-        Shoes.setVisibility(savedInstanceState.getInt("Shoes Visibility", View.GONE));
+        Arms.setVisibility(savedInstanceState.getInt("Arms Visibility"));
+        Eyes.setVisibility(savedInstanceState.getInt("Eyes Visibility"));
+        Eyebrows.setVisibility(savedInstanceState.getInt("Eyebrows Visibility"));
+        Ears.setVisibility(savedInstanceState.getInt("Ears Visibility"));
+        Glasses.setVisibility(savedInstanceState.getInt("Glasses Visibility"));
+        Hat.setVisibility(savedInstanceState.getInt("Hat Visibility"));
+        Mouth.setVisibility(savedInstanceState.getInt("Mouth Visibility"));
+        Mustache.setVisibility(savedInstanceState.getInt("Mustache Visibility"));
+        Nose.setVisibility(savedInstanceState.getInt("Nose Visibility"));
+        Shoes.setVisibility(savedInstanceState.getInt("Shoes Visibility"));
         super.onRestoreInstanceState(savedInstanceState);
     }
+
+    //Function to save the current value of the checbboxes to the given key.
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         savedInstanceState.putInt("Arms Visibility", Arms.getVisibility());
